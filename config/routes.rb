@@ -18,6 +18,8 @@ devise_scope :admin_user do
   get "/requests/sendoutemail" => "requests#sendoutemail"
   resources :requests 
   resources :patients
+  resources :patients, :path => 'medlink' 
+resources :patients, :path => 'MedLink'
 end
 
 
