@@ -16,6 +16,8 @@ Medlink::Application.routes.draw do
 devise_scope :admin_user do
   get "/requests/sendout" => "requests#sendout"
   get "/requests/sendoutemail" => "requests#sendoutemail"
+    get "/requests/notifications" => "requests#notifications"
+  get "/requests/sendoutnotifications" => "requests#sendoutnotifications"
   resources :requests 
   resources :patients
   resources :patients, :path => 'medlink' 
